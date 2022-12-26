@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+:root{
+    --off-white-color: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(227, 4%, 55%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    --font-size: 2rem;
+}
+
+body{
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--off-white-color);
+}
+
+/* ==== GLOBAL PROPERTIES ==== */
+.flex{display: flex;}
+.grid{display: grid;}
+p,h5{ color: var(--grayish-blue);}
+a,h3{ color: var(--off-white-color);}
+h2,h3{ font-weight: 600;}
+h1,h4{ color: var(--very-dark-blue);}
+h4,h5{ font-weight: 700;}
+.section1,.section3{
+    padding: 2rem 0;
+}
+p{
+    font-size: 15px;
+    line-height: 1.6;
+}
+.menu-icon, li,h3,h4{
+    cursor: pointer;
+}
+/* ==== GLOBAL PROPERTIES END ==== */
+
+/* ==== HEADER START ==== */
+nav{
+    position: relative;
+    justify-content: space-between;
+}
+
+
+li{
+    padding-block: 1rem;
+    list-style: none;
+}
+li:hover{
+    color: var(--soft-red);
+}
+/* ==== HEADER END ==== */
+
+/* ==== SECTION 1 START ==== */
+.section1-img{
+    margin-block: 1rem;
+}
+h1{
+    padding-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 800; 
+}
+.section1-p{
+   padding-bottom: 2rem; 
+}
+a{
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    letter-spacing: 5px;
+    background-color: var(--soft-red);
+}
+a:hover{
+    background-color: var(--very-dark-blue);
+    color: var(--off-white-color);
+}
+/* ==== SECTION 1 END ==== */
+
+/* ==== SECTION 2 START ==== */
+.section2{
+    padding: 1rem;
+    background-color: var(--very-dark-blue);
+}
+h2{
+    font-size: 3rem;
+    color: var(--soft-orange);
+}
+h3{
+    padding: 3rem 0 1rem 0;
+    font-size: 1.4rem;
+}
+h3:hover{
+    color: var(--soft-orange);
+}
+hr{
+    margin-top: 2rem;
+    border: 0.7px solid hsl(227, 4%, 55%);
+}
+/* ==== SECTION 2 END ==== */
+
+/* ==== SECTION 3 START ==== */
+article{
+    padding-block: 1.5rem;
+    gap:1.5rem;
+}
+.article-img{
+    width: 8rem;
+}
+.article-text > *{
+    padding-bottom: 1rem;
+}
+h4:hover{
+    color: var(--soft-red);
+}
+h5{
+    font-size: var(--font-size); 
+}
+
+/* ==== SECTION 3 END ==== */
+
+/* ==== MEDIA QUERIES ==== */
+@media (max-width:62.438rem){
+    .display-list{
+        display: none;
+    }
+    .list{
+        width: 60rem;
+        height: 90rem;
+        position: absolute;
+        top: -1rem;
+        left: 5rem;
+        background-color: var(--off-white-color);
+    }
+    ul{
+        padding: 3rem 2rem 0 1rem;   
+    }
+    .close-menu{
+        padding: 1rem;
+        margin-left: 13rem;
+    }
+    .section1-img{
+        width: 100%;
+    }
+    .section2-container{
+        display: flex;
+        gap: 1.5rem;
+    }
+    h2{
+        text-align: center;
+    }
+    hr{
+        display: none;
+    }
+    .border{
+        border-right: 2px solid var(--grayish-blue);
+    }
+    .section3-cards{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+@media (min-width: 62.5rem){
+    .close-menu{
+      display: none;
+    }
+    ul{
+        display: flex;
+        gap: 2rem;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .container, .section1-textes, .section3-cards{
+        display: flex;
+        gap: 2rem;
+    }
+    .section1{
+        padding-top: 1rem ;
+    }
+    .section2{
+        margin-top: 2rem;
+        height: 35rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        padding: 1rem 0 1rem 0;
+        font-size: 1rem;
+    }
+    hr{
+        margin-top: 1rem;
+    }
+
+    .section3{
+        padding-top: 1rem;
+    }
+
+}
